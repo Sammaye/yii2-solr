@@ -24,20 +24,20 @@ should use `Yii::$app->solr` (or whatever you have called the Solr application c
 
 Using the data provider for widgets is just as easy, as another example:
 
-$query = Yii::$app->solr->createSelect();
-$query->setQuery('(alt_subject_mpath:' . $model->path . ' OR alt_subject_mpath:' . $model->path . '.*) AND live:1');
-
-new SolrDataProvider([
-    'query' => $query,
-    'modelClass' => 'common\models\SolrResult',
-    'sort' => [
-        'attributes' => [
-            'title',
-            'sales',
-            'score'
+    $query = Yii::$app->solr->createSelect();
+    $query->setQuery('(alt_subject_mpath:' . $model->path . ' OR alt_subject_mpath:' . $model->path . '.*) AND live:1');
+    
+    new SolrDataProvider([
+        'query' => $query,
+        'modelClass' => 'common\models\SolrResult',
+        'sort' => [
+            'attributes' => [
+                'title',
+                'sales',
+                'score'
+            ]
         ]
-    ]
-]);
+    ]);
 
 As you will notice the Solarium query object can go straight into the data providers `query` property. Just like in Yii1 you need to provide a `modelClass` since this extension is not 
 connected to active record directly.
