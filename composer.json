@@ -1,0 +1,19 @@
+{
+    "name": "sammaye/yii2-solr",
+    "description": "Solr plugin for the Yii2 framework built ontop of Solarium",
+    "type": "yii2-extension",
+    "keywords": ["sammaye", "yii2", "extension", "yii2-extension", "Yii2 Extension", "solr", "solarium"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Sammaye",
+            "homepage": "http://sammaye.wordpress.com"
+        }
+    ],
+    "require": {
+        "solarium/solarium": "*"
+    },
+    "autoload": {
+        "psr-4": { "sammaye\\solr\\": "" }
+    }
+}
