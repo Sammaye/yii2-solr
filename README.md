@@ -24,6 +24,25 @@ var_dump($result->getNumFound());
 That is what it takes to query Solarium. As you notice the only part of the Solarium documentation you need to replace is where they use `$client` and instead you 
 should use `Yii::$app->solr` (or whatever you have called the Solr application component in your configuration).
 
+To setup the application you merely add it to your configuration. As an example:
+
+```php
+	'solr' => [
+		'class' => 'common\components\solr\Client',
+		'options' => [
+			'endpoint' => [
+				'solr1' => [
+					'host' => '10.208.225.66',
+					'port' => '8983',
+					'path' => '/solr'
+				]
+			]
+		]
+	],
+```
+
+The `options` part of the configuration is a one-to-one match to Solariums own constructor and options.
+
 Using the data provider for widgets is just as easy, as another example:
 
 ```php
