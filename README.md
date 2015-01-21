@@ -51,7 +51,7 @@ $query->setQuery('(alt_subject_mpath:' . $model->path . ' OR alt_subject_mpath:'
 
 new SolrDataProvider([
     'query' => $query,
-    // an exmaple class which assigns variables to the model(s)
+    // an example class which assigns variables to the model(s)
     // and returns the model 
     'modelClass' => 'SolrResult',
     'sort' => [
