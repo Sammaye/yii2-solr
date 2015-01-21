@@ -28,7 +28,7 @@ To setup the application you merely add it to your configuration. As an example:
 
 ```php
 	'solr' => [
-		'class' => 'common\components\solr\Client',
+		'class' => 'sammaye\solr\Client',
 		'options' => [
 			'endpoint' => [
 				'solr1' => [
@@ -51,7 +51,9 @@ $query->setQuery('(alt_subject_mpath:' . $model->path . ' OR alt_subject_mpath:'
 
 new SolrDataProvider([
     'query' => $query,
-    'modelClass' => 'common\models\SolrResult',
+    // an exmaple class which assigns variables to the model(s)
+    // and returns the model 
+    'modelClass' => 'SolrResult',
     'sort' => [
         'attributes' => [
             'title',
