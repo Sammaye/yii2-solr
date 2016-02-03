@@ -69,7 +69,7 @@ class SolrDataProvider extends BaseDataProvider
 	{
 		parent::init();
 		if (is_string($this->solr)) {
-			$this->solr = Instance::ensure($this->solr, Connection::className());
+			$this->solr = Instance::ensure($this->solr, Client::className());
 		}elseif($this->solr === null){
 			$this->solr = Instance::ensure('solr', Client::className());
 		}
