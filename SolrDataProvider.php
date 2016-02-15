@@ -7,7 +7,7 @@ use yii\base\Model;
 use yii\base\InvalidConfigException;
 use yii\data\BaseDataProvider;
 use yii\di\Instance;
-use Solarium\Core\Query\Query as SolrQuery;
+use Solarium\Core\Query\QueryInterface as SolrQuery;
 use sammaye\solr\Client;
 
 /**
