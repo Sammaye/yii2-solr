@@ -94,7 +94,7 @@ class SolrDataProvider extends BaseDataProvider
 		$resultset = $this->solr->select($this->query);
 		$highlighting = $resultset->getHighlighting();
 		$models = [];
-		foreach ($resultset as $result) {
+		foreach($resultset as $result){
 			$cname = $this->modelClass;
 			$model = $cname::populateFromSolr($result);
 			if (isset($highlighting) && $highlighting != null) {
