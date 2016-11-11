@@ -9,6 +9,7 @@ use yii\data\BaseDataProvider;
 use yii\di\Instance;
 use Solarium\Core\Query\QueryInterface as SolrQuery;
 use sammaye\solr\Client;
+use yii\helpers\Html;
 
 /**
  * This is the SolrDataProvider
@@ -91,10 +92,20 @@ class SolrDataProvider extends BaseDataProvider
 			}
 		}
 		$resultset = $this->solr->select($this->query);
+		$highlighting = $resultset->getHighlighting();
 		$models = [];
-		foreach($resultset as $result){
+		foreach ($resultset as $result) {
 			$cname = $this->modelClass;
-			$models[] = $cname::populateFromSolr($result);
+			$model = $cname::populateFromSolr($result);
+			if (isset($highlighting) && $highlighting != null) {
+				$highlightedDoc = $highlighting->getResult($result->id);
+				if ($highlightedDoc) {
+					foreach ($highlightedDoc as $field => $highlight) {
+						$model->highlight .= Html::decode(implode(' (...) ', $highlight) . '<br/>');
+					}
+				}
+			}
+			$models[] = $model;
 		}
 		return $models;
 	}
