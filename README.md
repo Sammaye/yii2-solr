@@ -10,7 +10,7 @@ There are only two files you need to pay attention to in this repository:
 - Client - The Solr client, representing the connection
 - SolrDataProvider - The data provider you can use with all your widgets etc.
 
-Normal querying of Solr is very simple with this extension and I will in fact point you towards the [Solarium Documentation](http://wiki.solarium-project.org/index.php/V3:Manual_for_version_3.x).
+Normal querying of Solr is very simple with this extension and I will in fact point you towards the [Solarium Documentation](https://solarium.readthedocs.io/en/5.2.0/).
  
 The only part Yii2 really has is in providing the Solarium client class as a application component, to show an example:
 
@@ -34,7 +34,8 @@ To setup the application you merely add it to your configuration. As an example:
 				'solr1' => [
 					'host' => '10.208.225.66',
 					'port' => '8983',
-					'path' => '/solr'
+					'path' => '/',
+					'collection' => 'myColl
 				]
 			]
 		]
