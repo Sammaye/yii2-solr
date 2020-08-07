@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "solarium/solarium": "*"
+        "solarium/solarium": "~5.0"
     },
     "autoload": {
         "psr-4": { "sammaye\\solr\\": "" }
