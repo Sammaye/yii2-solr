@@ -1,19 +1,19 @@
 {
-    "name": "sammaye/yii2-solr",
-    "description": "Solr plugin for the Yii2 framework built ontop of Solarium",
+    "name": "b0rner/yii2-solr",
+    "description": "Solr plugin for the Yii2 framework built ontop of Solarium 6 an PHP 8",
     "type": "yii2-extension",
-    "keywords": ["sammaye", "yii2", "extension", "yii2-extension", "Yii2 Extension", "solr", "solarium"],
+    "keywords": ["b0rner", "yii2", "extension", "yii2-extension", "Yii2 Extension", "solr", "solarium", "php8"],
     "license": "BSD-3-Clause",
     "authors": [
         {
-            "name": "Sammaye",
-            "homepage": "http://sammaye.wordpress.com"
+            "name": "B0rner",
+            "homepage": "https://github.com/B0rner"
         }
     ],
     "require": {
         "solarium/solarium": "~6.0"
     },
     "autoload": {
-        "psr-4": { "sammaye\\solr\\": "" }
+        "psr-4": { "b0rner\\solr\\": "" }
     }
 }

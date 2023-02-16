@@ -1,7 +1,8 @@
 yii2-solr
 =========
 
-A Yii2 Solr Extension built on top of Solarium.
+A Yii2 Solr Extension built on top of Solarium 6 and works with PHP 8.
+This extension is based of the yii2-solr from Sammaye (https://github.com/Sammaye/yii2-solr), which unfortunately is not being developed further. Thanks Sammaye for the important work so far that has made it possible to use Solr elegantly in Yii2.
 
 Essentially this is a Yii2 plugin for Solarium and it is dirt simple to use, all it does is abstract certain parts of Solarium into Yii2.
 
@@ -10,7 +11,7 @@ There are only two files you need to pay attention to in this repository:
 - Client - The Solr client, representing the connection
 - SolrDataProvider - The data provider you can use with all your widgets etc.
 
-Normal querying of Solr is very simple with this extension and I will in fact point you towards the [Solarium Documentation](https://solarium.readthedocs.io/en/5.2.0/).
+Normal querying of Solr is very simple with this extension and I will in fact point you towards the [Solarium Documentation](https://solarium.readthedocs.io/en/6.0.0/getting-started/).
  
 The only part Yii2 really has is in providing the Solarium client class as a application component, to show an example:
 
@@ -28,7 +29,7 @@ To setup the application you merely add it to your configuration. As an example:
 
 ```php
 	'solr' => [
-		'class' => 'sammaye\solr\Client',
+		'class' => 'b0rner\solr\Client',
 		'options' => [
 			'endpoint' => [
 				'solr1' => [

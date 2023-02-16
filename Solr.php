@@ -1,6 +1,6 @@
 <?php
 
-namespace sammaye\solr;
+namespace b0rner\solr;
 
 use Yii;
 

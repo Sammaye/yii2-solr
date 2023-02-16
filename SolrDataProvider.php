@@ -1,6 +1,6 @@
 <?php
 
-namespace sammaye\solr;
+namespace b0rner\solr;
 
 use Yii;
 use yii\base\Model;
@@ -8,7 +8,7 @@ use yii\base\InvalidConfigException;
 use yii\data\BaseDataProvider;
 use yii\di\Instance;
 use Solarium\Core\Query\QueryInterface as SolrQuery;
-use sammaye\solr\Client;
+use b0rner\solr\Client;
 use yii\helpers\Html;
 
 /**
